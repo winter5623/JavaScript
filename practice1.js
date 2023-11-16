@@ -80,11 +80,11 @@ DATA.forEach((d, j) => {
 
       bar
       .append('rect').attr('fill', 'gray')
-      .attr('y', -12).attr('width', styles.wid[i]).attr('height', 15)
+      .attr('y', -14).attr('width', styles.wid[i]).attr('height', 15)
 
       bar
       .append('rect').attr('fill', styles.bC)
-      .attr('y', -12).attr('width', styles.wid[i] * (d.PRO / 100)).attr('height', 15)
+      .attr('y', -14).attr('width', styles.wid[i] * (d.PRO / 100)).attr('height', 15)
 
       bar
       .append('text').attr('fill', styles.tC[i]).attr('x', styles.wid[i] * (d.PRO / 100))
@@ -180,11 +180,11 @@ styles.col.forEach((s, j) => {
 
       bar
       .append('rect').attr('fill', 'gray')
-      .attr('y', -12).attr('width', styles.wid[j]).attr('height', 15)
+      .attr('y', -14).attr('width', styles.wid[j]).attr('height', 15)
 
       bar
       .append('rect').attr('fill', styles.bC[i])
-      .attr('y', -12).attr('width', styles.wid[j] * (d.PRO / 100)).attr('height', 15)
+      .attr('y', -14).attr('width', styles.wid[j] * (d.PRO / 100)).attr('height', 15)
 
       bar
       .append('text').attr('fill', styles.tC[i]).attr('x', styles.wid[j] * (d.PRO / 100))
