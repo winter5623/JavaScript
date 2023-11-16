@@ -1,4 +1,4 @@
-// 데이터 -> svg
+// 표 만들기 (데이터 -> svg)
 // 행단위 작업
 
 let Style = {
@@ -10,6 +10,7 @@ let Style = {
 }
 
 // aaa.replace(/\s/g, '').split('/').map(Number)
+let dataN = ['Discipline', 'Total', 'Comp.', 'Remain', 'Progress(%)']
 
 let DATA = [
   {DISC: 'ELE',   TOT: 200, ACT: 60,  REM: 140, PRO: 30,},
@@ -54,7 +55,7 @@ let Header = Table
 .append('g')
 .attr('id','HEADER').attr('transform', 'translate(0,0)')
 
-styles.col.forEach((d, i) => {
+dataN.forEach((d, i) => {
   Header
   .append('text')
   .attr('transform', `translate(${styles.x[i]}, 0)`).attr('fiil', styles.tC[i])
@@ -108,6 +109,7 @@ let Style = {
 }
 
 // aaa.replace(/\s/g, '').split('/').map(Number)
+let dataN = ['Discipline', 'Total', 'Comp.', 'Remain', 'Progress(%)']
 
 let DATA = [
   {DISC: 'ELE',   TOT: 200, ACT: 60,  REM: 140, PRO: 30,},
@@ -152,7 +154,7 @@ let Header = Table
 .append('g')
 .attr('id','HEADER').attr('transform', 'translate(0,0)')
 
-styles.col.forEach((s, i) => {
+dataN.forEach((s, i) => {
   Header
   .append('text')
   .attr('transform', `translate(${styles.x[i]}, 0)`).attr('fiil', styles.tC[i])
