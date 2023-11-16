@@ -5,7 +5,7 @@ let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
   tColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
-  align:  'start  / start  / start   / start  / start  ',
+  tA:  'start  / start  / start   / start  / start  ',
   bColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
 }
 
@@ -23,7 +23,7 @@ let styles = {
   col: Style.column.replace(/\s/g, '').split('/'),
   wid: Style.width.replace(/\s/g, '').split('/').map(Number),
   tC: Style.tColor.replace(/\s/g, '').split('/'),
-  ali: Style.align.replace(/\s/g, '').split('/'),
+  tA: Style.align.replace(/\s/g, '').split('/'),
   bC: Style.bColor.replace(/\s/g, '').split('/'),
   x: []
 }
@@ -31,7 +31,7 @@ let styles = {
 let x_ = 0
 
 styles.wid.forEach((d, i) => {
-  switch (styles.ali[i]) {
+  switch (styles.tA[i]) {
     case 'start' :
       styles.x.push(x_)
       break
@@ -58,7 +58,7 @@ styles.col.forEach((d, i) => {
   Header
   .append('text')
   .attr('transform', `translate(${styles.x[i]}, 0)`).attr('fiil', styles.tC[i])
-  .attr('text-anchor', styles.ali[i]).text(d)
+  .attr('text-anchor', styles.tA[i]).text(d)
 })
 
 let y_ = 30
@@ -71,7 +71,7 @@ DATA.forEach((d, j) => {
       line
       .append('text')
       .attr('x', styles.x[i]).attr('fill', styles.tC[i])
-      .attr('text-anchor', styles.ali[i]).text(d[s])
+      .attr('text-anchor', styles.tA[i]).text(d[s])
     } else {
       let bar = line
       .append('g')
@@ -87,7 +87,7 @@ DATA.forEach((d, j) => {
 
       bar
       .append('text').attr('fill', styles.tC[i]).attr('x', styles.wid[i] * (d.PRO / 100))
-      .attr('text-anchor', styles.ali[i]).text(d[s])
+      .attr('text-anchor', styles.tA[i]).text(d[s])
     }
   })
 
@@ -103,7 +103,7 @@ let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
   tColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
-  align:  'start  / start  / start   / start  / start  ',
+  tA:  'start  / start  / start   / start  / start  ',
   bColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
 }
 
@@ -121,7 +121,7 @@ let styles = {
   col: Style.column.replace(/\s/g, '').split('/'),
   wid: Style.width.replace(/\s/g, '').split('/').map(Number),
   tC: Style.tColor.replace(/\s/g, '').split('/'),
-  ali: Style.align.replace(/\s/g, '').split('/'),
+  tA: Style.align.replace(/\s/g, '').split('/'),
   bC: Style.bColor.replace(/\s/g, '').split('/'),
   x: []
 }
@@ -129,7 +129,7 @@ let styles = {
 let x_ = 0
 
 styles.wid.forEach((d, i) => {
-  switch (styles.ali[i]) {
+  switch (styles.tA[i]) {
     case 'start' :
       styles.x.push(x_)
       break
@@ -156,7 +156,7 @@ styles.col.forEach((s, i) => {
   Header
   .append('text')
   .attr('transform', `translate(${styles.x[i]}, 0)`).attr('fiil', styles.tC[i])
-  .attr('text-anchor', styles.ali[i]).text(s)
+  .attr('text-anchor', styles.tA[i]).text(s)
 })
 
 styles.col.forEach((s, j) => {
@@ -170,7 +170,7 @@ styles.col.forEach((s, j) => {
       line
       .append('text')
       .attr('y', y_).attr('fill', styles.tC[i])
-      .attr('text-anchor', styles.ali[i]).text(d[s])
+      .attr('text-anchor', styles.tA[i]).text(d[s])
     } else {
       let bar = line
       .append('g')
@@ -186,7 +186,7 @@ styles.col.forEach((s, j) => {
 
       bar
       .append('text').attr('fill', styles.tC[i]).attr('x', styles.wid[j] * (d.PRO / 100))
-      .attr('text-anchor', styles.ali[i]).text(d[s])
+      .attr('text-anchor', styles.tA[i]).text(d[s])
     }
     y_ += 25
   })
