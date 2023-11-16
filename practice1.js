@@ -76,7 +76,7 @@ DATA.forEach((d, j) => {
     } else {
       let bar = line
       .append('g')
-      .attr('id', `bar-${j}`).attr('transform', `translate(${styles.x[i]}, 0)`).attr('text-anchor', styles.ali[i])
+      .attr('id', `bar-${j}`).attr('transform', `translate(${styles.x[i]}, 0)`).attr('text-anchor', tA[i])
 
       bar
       .append('rect').attr('fill', 'gray')
@@ -176,7 +176,7 @@ styles.col.forEach((s, j) => {
     } else {
       let bar = line
       .append('g')
-      .attr('id', `bar-${i}`).attr('transform', `translate(0, ${y_})`).attr('text-anchor', styles.ali[i])
+      .attr('id', `bar-${i}`).attr('transform', `translate(0, ${y_})`).attr('text-anchor', tA[i])
 
       bar
       .append('rect').attr('fill', 'gray')
