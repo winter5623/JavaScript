@@ -5,7 +5,7 @@ let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
   tColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
-  tA:  'start  / start  / start   / start  / start  ',
+  tAnchor:  'start  / start  / start   / start  / start  ',
   bColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
 }
 
@@ -23,7 +23,7 @@ let styles = {
   col: Style.column.replace(/\s/g, '').split('/'),
   wid: Style.width.replace(/\s/g, '').split('/').map(Number),
   tC: Style.tColor.replace(/\s/g, '').split('/'),
-  tA: Style.align.replace(/\s/g, '').split('/'),
+  tA: Style.tAnchor.replace(/\s/g, '').split('/'),
   bC: Style.bColor.replace(/\s/g, '').split('/'),
   x: []
 }
@@ -103,7 +103,7 @@ let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
   tColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
-  tA:  'start  / start  / start   / start  / start  ',
+  tAnchor:  'start  / start  / start   / start  / start  ',
   bColor: '#757575 / #757575 / #757575  / #757575 / #757575 ',
 }
 
@@ -121,7 +121,7 @@ let styles = {
   col: Style.column.replace(/\s/g, '').split('/'),
   wid: Style.width.replace(/\s/g, '').split('/').map(Number),
   tC: Style.tColor.replace(/\s/g, '').split('/'),
-  tA: Style.align.replace(/\s/g, '').split('/'),
+  tA: Style.tAnchor.replace(/\s/g, '').split('/'),
   bC: Style.bColor.replace(/\s/g, '').split('/'),
   x: []
 }
