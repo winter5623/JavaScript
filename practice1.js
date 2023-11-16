@@ -1,5 +1,6 @@
-// 행단위 출력
-/*
+// 데이터 -> svg
+// 행단위 작업
+
 let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
@@ -92,12 +93,12 @@ DATA.forEach((d, j) => {
 
   y_ += 25
 })
-*/
 
 
 
-// 열단위 출력
-/*
+
+// 열단위 작업
+
 let Style = {
   column: 'DISC    / TOT     / ACT      / REM     / PRO     ',
   width:  '60      / 80      / 80       / 80      / 200     ',
@@ -141,8 +142,6 @@ styles.wid.forEach((d, i) => {
   }
   x_ += d
 })
-
-
 
 let Table = this.svg
 .append('g')
@@ -192,4 +191,3 @@ styles.col.forEach((s, j) => {
     y_ += 25
   })
 })
-*/
